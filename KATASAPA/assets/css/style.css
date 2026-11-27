@@ -1,0 +1,672 @@
+/* ==========================================
+   1. RESET & PENGATURAN DASAR
+   ========================================== */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #12100E; /* Hitam espresso hangat */
+    color: #E6DFD5;          /* Putih gading agar nyaman membaca naskah/karya */
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ==========================================
+   2. NAVBAR / HEADER
+   ========================================== */
+.navbar {
+    background-color: rgba(28, 25, 22, 0.92);
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    border-bottom: 1px solid #2E2924;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+.logo-img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.logo-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+    color: #F4EFE6;
+}
+
+.logo-text p {
+    font-size: 0.6rem;
+    color: #A39B8B;
+    letter-spacing: 0.5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.navbar nav a {
+    color: #A39B8B;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.navbar nav a:hover, 
+.navbar nav a.active {
+    color: #D4AF37;
+    border-bottom: 2px solid #D4AF37;
+    padding-bottom: 4px;
+}
+
+.btn-login {
+    border: 1px solid #D4AF37;
+    color: #D4AF37;
+    padding: 0.4rem 1.4rem;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: #D4AF37;
+    color: #12100E;
+}
+
+/* ==========================================
+   3. HERO SECTION (BANNER RUANG BACA & SASTRA)
+   ========================================== */
+.hero {
+    background: linear-gradient(
+                    to right, 
+                    rgba(18, 16, 14, 0.94) 0%, 
+                    rgba(18, 16, 14, 0.80) 45%, 
+                    rgba(18, 16, 14, 0.30) 100%
+                ), 
+                url('../img/instagram/ruang-lain-workshop.webp') center/cover no-repeat;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    border-bottom: 1px solid #2E2924;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 620px;
+}
+
+.hero-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.4rem;
+    letter-spacing: 3px;
+    color: #F4EFE6;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.45rem;
+    font-weight: 400;
+    color: #D4AF37;
+    margin-top: 0.3rem;
+}
+
+.hero-content p {
+    font-style: italic;
+    color: #D6CEC2;
+    margin: 1rem 0 2rem 0;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+.btn-hero {
+    background-color: #D4AF37;
+    color: #12100E;
+    padding: 0.75rem 1.6rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-hero:hover {
+    background-color: #E2C044;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+}
+
+/* ==========================================
+   4. KOTAK FITUR / MENU UTAMA (4 GRID)
+   ========================================== */
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: #1C1916;
+    border-bottom: 1px solid #2E2924;
+}
+
+.feature-item {
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    border-right: 1px solid #2E2924;
+    transition: background 0.3s ease;
+}
+
+.feature-item:last-child {
+    border-right: none;
+}
+
+.feature-item:hover {
+    background-color: #25211D;
+}
+
+.feature-item h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #F4EFE6;
+}
+
+.feature-item p {
+    font-size: 0.8rem;
+    color: #A39B8B;
+    line-height: 1.5;
+}
+
+/* ==========================================
+   5. AGENDA TERDEKAT SECTION
+   ========================================== */
+.agenda-section {
+    padding: 4rem 5%;
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.section-title h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    border-left: 3px solid #D4AF37;
+    padding-left: 12px;
+    color: #F4EFE6;
+}
+
+.section-title a {
+    color: #A39B8B;
+    font-size: 0.85rem;
+    transition: color 0.3s;
+}
+
+
+.section-title a:hover {
+    color: #D4AF37;
+}
+
+.agenda-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.agenda-link {
+    display: block;
+}
+
+.agenda-empty {
+    grid-column: 1 / -1;
+    color: #A39B8B;
+    padding: 1.5rem;
+    border: 1px solid #2E2924;
+    border-radius: 8px;
+    background: #1C1916;
+}
+
+.card-agenda {
+    background-color: #1C1916;
+    border: 1px solid #2E2924;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card-agenda:hover {
+    transform: translateY(-5px);
+    border-color: #D4AF37;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+}
+
+.card-img {
+    display: block;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    background-color: #25211D;
+}
+
+.card-body {
+    padding: 1.2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.date-box {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    min-width: 40px;
+}
+
+.date-box .day {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #D4AF37;
+}
+
+.date-box .month {
+    font-size: 0.7rem;
+    color: #A39B8B;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+}
+
+.card-info h4 {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+    color: #F4EFE6;
+    line-height: 1.4;
+}
+
+.card-info p {
+    font-size: 0.75rem;
+    color: #A39B8B;
+}
+
+.badge {
+    display: inline-block;
+    margin-top: 0.6rem;
+    padding: 0.2rem 0.6rem;
+    background-color: rgba(212, 175, 55, 0.12);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    font-size: 0.65rem;
+    border-radius: 4px;
+    color: #D4AF37;
+}
+
+/* ==========================================
+   6. TENTANG & QUOTE SECTION
+   ========================================== */
+.about-quote-section {
+    padding: 0 5% 5rem 5%;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.about-text h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    border-left: 3px solid #D4AF37;
+    padding-left: 12px;
+    margin-bottom: 1.2rem;
+    color: #F4EFE6;
+}
+
+.about-text p {
+    font-size: 0.9rem;
+    color: #A39B8B;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.btn-dark {
+    background-color: #1C1916;
+    color: #E6DFD5;
+    border: 1px solid #3D362F;
+    padding: 0.7rem 1.4rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 4px;
+    display: inline-block;
+    transition: all 0.3s;
+}
+
+.btn-dark:hover {
+    background-color: #25211D;
+    border-color: #D4AF37;
+    color: #D4AF37;
+}
+
+.quote-card {
+    background: linear-gradient(145deg, #1C1916, #161411);
+    border: 1px solid #332D26;
+    padding: 3rem 2.5rem;
+    border-radius: 8px;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.quote-card p {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    color: #F4EFE6;
+}
+
+.quote-card span {
+    font-size: 0.75rem;
+    color: #D4AF37;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+}
+
+/* ==========================================
+   7. FOOTER
+   ========================================== */
+footer {
+    background-color: #0E0C0B;
+    color: #A39B8B;
+    padding: 2rem 5%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    border-top: 1px solid #2E2924;
+}
+
+.reveal {
+    animation: section-enter 0.7s ease both;
+}
+
+.reveal-delay {
+    animation-delay: 0.15s;
+}
+
+@keyframes section-enter {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================
+   8. RESPONSIVE
+   ========================================== */
+@media (max-width: 900px) {
+    .features, .agenda-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .about-quote-section {
+        grid-template-columns: 1fr;
+    }
+    .navbar {
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+    .navbar nav {
+        display: block;
+        order: 3;
+        flex: 1 0 100%;
+        overflow-x: auto;
+    }
+    .navbar nav ul {
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    .navbar nav a {
+        font-size: 0.75rem;
+    }
+    .hero {
+        background: linear-gradient(
+                        to bottom, 
+                        rgba(18, 16, 14, 0.88) 0%, 
+                        rgba(18, 16, 14, 0.70) 100%
+                    ), 
+                    url('../img/instagram/ruang-lain-workshop.webp') center/cover no-repeat;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            scroll-behavior: auto !important;
+        }
+    }
+}
+
+/* =====================================
+   HALAMAN KARYA - KATASAPA
+===================================== */
+
+/* Pengaturan dasar halaman */
+body {
+    background-color: #12100E;
+    color: #F4EFE6;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header halaman */
+.page-header {
+    position: relative;
+    padding: 90px 8%;
+    text-align: center;
+    background:
+        linear-gradient(rgba(18, 16, 14, 0.65), rgba(18, 16, 14, 0.75)),
+        url('../img/instagram/ruang-lain-poster.webp') center/cover no-repeat;
+    border-bottom: 1px solid #332D26;
+}
+
+.page-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 600;
+    color: #D4AF37;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.page-header p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #C5BBAE;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* Area konten */
+.content-container {
+    max-width: 1250px;
+    min-height: 60vh;
+    margin: auto;
+    padding: 75px 5%;
+}
+
+/* Grid karya */
+.karya-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+/* Kartu karya */
+.card-karya {
+    position: relative;
+    min-height: 310px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: linear-gradient(145deg, #241F1B, #191613);
+    border: 1px solid #393027;
+    border-radius: 8px;
+
+    transition: all 0.35s ease;
+    overflow: hidden;
+}
+
+/* Aksen dekoratif kartu */
+.card-karya::before {
+    content: "“";
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 100px;
+    color: rgba(212, 175, 55, 0.08);
+    line-height: 1;
+}
+
+.card-karya:hover {
+    transform: translateY(-8px);
+    border-color: #D4AF37;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Kategori karya */
+.kategori {
+    display: inline-block;
+    color: #D4AF37;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #D4AF37;
+    padding-bottom: 7px;
+    margin-bottom: 20px;
+}
+
+/* Judul karya */
+.card-karya h4 {
+    position: relative;
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #F4EFE6;
+    margin-bottom: 15px;
+}
+
+/* Cuplikan karya */
+.cuplikan {
+    color: #B9AD9E;
+    font-size: 13px;
+    font-style: italic;
+    line-height: 1.9;
+}
+
+/* Informasi penulis */
+.penulis {
+    margin-top: 25px;
+    padding-top: 17px;
+    border-top: 1px solid #393027;
+    color: #938879;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 25px 8%;
+    background-color: #0D0C0A;
+    border-top: 1px solid #332D26;
+    color: #A39B8B;
+    font-size: 12px;
+}
+
+footer strong {
+    color: #D4AF37;
+    letter-spacing: 2px;
+}
+
+footer a {
+    color: #D4AF37;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #F4EFE6;
+}
+
+/* Responsif tablet */
+@media (max-width: 900px) {
+    .karya-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .page-header h2 {
+        font-size: 42px;
+    }
+}
+
+/* Responsif HP */
+@media (max-width: 600px) {
+    .karya-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-header {
+        padding: 65px 7%;
+    }
+
+    .page-header h2 {
+        font-size: 35px;
+    }
+
+    .content-container {
+        padding: 45px 6%;
+    }
+
+    .card-karya {
+        min-height: 270px;
+        padding: 25px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
